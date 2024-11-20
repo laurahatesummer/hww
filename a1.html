@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: purple;
+        }
+        .label {
+            color: #8B4513; /* 咖啡色 */
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-text {
+            width: 100%;
+            color: blue; /* 藍色 */
+            font-size: 1.1em;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: red; /* 紅色 */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+        .button:hover {
+            opacity: 0.8;
+        }
+        .result {
+            color: red; /* 紅色 */
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none; /* 隱藏元素 */
+        }
+    </style>
+</head>
+<body>
+    <h2>會員登入</h2>
+    <form>
+        <div>
+            <label class="label" for="username">帳號</label>
+            <input type="text" id="username" class="input-text" placeholder="請輸入帳號">
+        </div>
+        <div>
+            <label class="label" for="password">密碼</label>
+            <input type="password" id="password" class="input-text" placeholder="請輸入密碼">
+        </div>
+        <div>
+            <label class="label" for="birthday">生日</label>
+            <input type="date" id="birthday" class="input-text">
+        </div>
+        <button type="submit" class="button">登入</button>
+    </form>
+
+    <!-- 模擬登入成功或失敗的靜態訊息 -->
+    <div class="result hidden" id="successMessage">
+        會員帳號：john，你已經成功登入網站，你的生日是 2024/11/21。
+    </div>
+    <div class="result hidden" id="errorMessage">
+        會員帳號：john，你的密碼輸入錯誤！
+    </div>
+</body>
+</html>
